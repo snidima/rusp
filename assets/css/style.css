@@ -1,0 +1,139 @@
+body {
+    font-family: "OPEN SANS", Arial;
+    background-color: #F3F3F3;
+    color:#30394A;
+}
+
+.logo {
+
+
+    font-size:14pt;
+    padding:10px;
+    background-color:#313950;
+    color:white;
+}
+
+.regLink {
+    color:#FFF;
+    opacity: 0.95;
+    text-align:center;
+    background-color:#9ACE4F;
+    text-transform: uppercase;
+    display:block;
+    cursor:pointer;
+    text-decoration: none;
+    font-size:15pt;
+    padding:10px 10px 10px 10px;
+
+}
+
+
+.regLink:hover {
+    opacity: 1;
+    cursor:pointer;
+    text-decoration: none;
+    color:#FFFFFF;
+    background-color:#9ACE4F;
+}
+
+
+.menuLink {
+    color:#FFFFFF;
+    background-color:#48B1CF;
+    text-transform: uppercase;
+    display:block;
+    text-decoration: none;
+    font-size:14pt;
+    padding:10px 10px 10px 30px;
+
+}
+
+
+.menuLink:hover {
+    color:#FFFFFF;
+    background-color:#0086b3;
+}
+
+.tooltip {
+    max-width: 300px;
+    min-width:200px;
+    width:auto !important;
+    /* If max-width does not work, try using width instead */
+}
+
+.dblue, .dblue:hover {
+
+    background-color:#313950;
+    color:white;
+}
+
+.loginArea {
+    background-color:#F3F3F3;
+    color:#333;
+    padding:15px;
+}
+
+.leftSideBar {
+    background-color:white;
+    min-height:600px;
+    margin:0px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   /* color:*/
+    margin:5px;
+}
+
+.rightSideBar {
+    background-color:#3B455D;
+    min-height:600px;
+    color:white;
+}
+
+.mainArea {
+    margin:10px 0px;
+    border:1px solid #E1E5E8;
+    background-color:white;
+    padding:15px;
+
+}
+
+.mtop5 {
+    margin-top:5px;
+}
+
+.mtop10 {
+    margin-top:10px;
+}
+
+.mtop15 {
+    margin-top:15px;
+}
+
+.mtop20 {
+    margin-top:20px;
+}
+
+.mtop25 {
+    margin-top:25px;
+}
+
+.mtop30 {
+    margin-top:30px;
+}
+
+.mtop35 {
+    margin-top:35px;
+}
+
+.mtop40 {
+    margin-top:40px;
+}
+
+.mtop45 {
+    margin-top:45px;
+}
+
+.mtop50 {
+    margin-top:50px;
+}
