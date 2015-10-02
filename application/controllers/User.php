@@ -316,7 +316,6 @@ class User extends CI_Controller {
 
     public function buyer($nickname)  //добавить линк на аву в бд
     {
-
         $id = $this->session->userId;
         $data['info'] = $this->userM->getInfo($id)[0];
         $this->view($data);
@@ -326,7 +325,7 @@ class User extends CI_Controller {
     public function balance()
     {
         /*вывести первых 2 записей. для упрощения должно быть равно $num в function more()*/
-        $num = 2;
+        $num = 1;
 
         $id = $this->session->userId;
         $data['info'] = $this->transactionM->getLastInfo($id, $num, 0);
@@ -335,18 +334,20 @@ class User extends CI_Controller {
         //$data['sum'] = array_sum(array_column($data['info'], 'amount'));
 
         /*скрыть или показать кнопку "Показать еще"*/
-        if (!empty($this->transactionM->getLastInfo($id, 1, $num)))
+        if (sizeof($this->transactionM->getLastInfo($id, 1, $num)) != 0)
             $data['nomore'] = true;
         else
             $data['nomore'] = false;
 
         $this->view($data);
+
+
     }
 
     public function more() // перенести $num, проверить сколько осталось, спрятать кнопку ...
     {
         /*вывести еще 2 записи. для упрощения должно быть равно $num в function balance()*/
-        $num = 2;
+        $num = 1;
 
         $page = $this->input->post('page');
         $id = $this->session->userId;
@@ -365,9 +366,8 @@ class User extends CI_Controller {
         }
         $data['html'] = $temp;
 
-
         /*остались ли еще записи?*/
-        if (empty($this->transactionM->getLastInfo($id, 1, ($page+1) * $num)))
+        if (sizeof($this->transactionM->getLastInfo($id, 1, ($page+1) * $num)) == 0)
             $data['stop'] = true;
         else
             $data['stop'] = false;
