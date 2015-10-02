@@ -1,6 +1,6 @@
 body {
     font-family: "OPEN SANS", Arial;
-    background-color: #F3F3F3;
+    background-color: #fff;
     color:#30394A;
 }
 
@@ -70,7 +70,7 @@ body {
 .loginArea {
     background-color:#F3F3F3;
     color:#333;
-    padding:15px;
+    padding:0px;
 }
 
 .leftSideBar {
@@ -97,6 +97,7 @@ h1, h2, h3, h4, h5, h6 {
     padding:15px;
 
 }
+
 
 .mtop5 {
     margin-top:5px;
@@ -136,4 +137,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .mtop50 {
     margin-top:50px;
+}
+
+/***********************************/
+
+.menu-kapper>a>i{
+    margin-right: 10px;
+}
+
+.mainbuyer {
+
 }

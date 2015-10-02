@@ -130,5 +130,12 @@ class userM extends CI_Model {
     }
 
 
+    public function getInfo($id)
+    {
 
+        $this->db->where('userId', $id)->select('delivery, description');
+        $query = $this->db->get($this->table,'delivery', 'description');
+
+        return $query->result_array();
+    }
 }

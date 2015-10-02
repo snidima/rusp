@@ -87,8 +87,9 @@ class User extends CI_Controller {
      public function login()
     {
 
+
         if($this->isLoggedIn()){
-            echo -1;
+            echo -1; //next
             exit;
         }
 
@@ -96,7 +97,7 @@ class User extends CI_Controller {
 
             if($this->session->userdata('login_attempts') > 3){
                 if(!$this->__checkCaptcha($this->input->post('g-recaptcha-response'))){
-                    echo -3;
+                    echo -3; // you are bot
                     exit;
                 }
             }
@@ -107,13 +108,13 @@ class User extends CI_Controller {
                 $this->session->set_userdata('login_attempts', $tries + 1);
 
                 if($tries >= 3)
-                    echo -2;
+                    echo -2; // wrong pass
                 else
                     echo 0;
 
                 exit;
             }else{
-                echo 1;
+                echo 1; //next
                 exit;
             }
 
@@ -145,7 +146,7 @@ class User extends CI_Controller {
             curl_setopt($ch, CURLOPT_URL,"https://www.google.com/recaptcha/api/siteverify");
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS,
-                "secret=6Lc_UQ0TAAAAAHqGt3p0vBo94ZfhqG4B6ZR1t5Ho&response=$captcha");
+                "secret=6LeP4w0TAAAAAJq4MLXslyPLVJ40TEwXTGK6UdVZ&response=$captcha");
 
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -311,7 +312,68 @@ class User extends CI_Controller {
         redirect('/');
     }
 
+/**************************************************************/
 
+    public function buyer($nickname)  //добавить линк на аву в бд
+    {
+
+        $id = $this->session->userId;
+        $data['info'] = $this->userM->getInfo($id)[0];
+        $this->view($data);
+    }
+
+
+    public function balance()
+    {
+        /*вывести первых 2 записей. для упрощения должно быть равно $num в function more()*/
+        $num = 2;
+
+        $id = $this->session->userId;
+        $data['info'] = $this->transactionM->getLastInfo($id, $num, 0);
+
+        /*Сумма выведенных средств*/
+        //$data['sum'] = array_sum(array_column($data['info'], 'amount'));
+
+        /*скрыть или показать кнопку "Показать еще"*/
+        if (!empty($this->transactionM->getLastInfo($id, 1, $num)))
+            $data['nomore'] = true;
+        else
+            $data['nomore'] = false;
+
+        $this->view($data);
+    }
+
+    public function more() // перенести $num, проверить сколько осталось, спрятать кнопку ...
+    {
+        /*вывести еще 2 записи. для упрощения должно быть равно $num в function balance()*/
+        $num = 2;
+
+        $page = $this->input->post('page');
+        $id = $this->session->userId;
+        $data = $this->transactionM->getLastInfo($id, $num, $page * $num);
+
+        $temp = '';
+        foreach($data as $d){
+            $temp .= "<tr><td>";
+            $temp .= date('d.m.Y, G:H', $d['date']);
+            $temp .= "</td><td>";
+            $temp .= $d['type'];
+            $temp .= "</td><td><b><i class='fa fa-usd'></i> ";
+            $temp .= $d['amount'];
+            $temp .= "</b></td></tr>";
+
+        }
+        $data['html'] = $temp;
+
+
+        /*остались ли еще записи?*/
+        if (empty($this->transactionM->getLastInfo($id, 1, ($page+1) * $num)))
+            $data['stop'] = true;
+        else
+            $data['stop'] = false;
+
+        echo json_encode($data);
+    }
 
 
 
