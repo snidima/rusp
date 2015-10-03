@@ -376,5 +376,11 @@ class User extends CI_Controller {
     }
 
 
+    public function supportsend()
+    {
+        $this->view();
+    }
+
+
 
 }

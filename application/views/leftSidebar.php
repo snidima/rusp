@@ -78,9 +78,9 @@
 <!--                    <span class="badge">1</span>-->
                     <i class="fa fa-cog"></i> Настройки
                 </a>
-                <a href="#" class="list-group-item">
+                <a href="/user/supportsend" class="list-group-item">
 <!--                    <span class="badge">1</span>-->
-                    <i class="fa fa-question-circle"></i> Служба поддержки
+                    <i class="fa fa-comments"></i> Служба поддержки
                 </a>
                 <a href="#" class="list-group-item">
                     <span class="badge">2</span>
