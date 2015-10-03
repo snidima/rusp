@@ -1,17 +1,11 @@
-
-
-
-
-<!-- TAB NAVIGATION -->
 <ul class="nav nav-tabs" role="tablist">
     <li class="active"><a href="#tab1" role="tab" data-toggle="tab">Задасть вопрос</a></li>
     <li><a href="#tab2" role="tab" data-toggle="tab">Активные переписки</a></li>
 </ul>
-<!-- TAB CONTENT -->
+
 <div class="tab-content">
     <div class="active tab-pane fade in" id="tab1">
         <h2>Отрапвка сообщения</h2>
-
         <div class="panel panel-danger">
             <div class="panel-heading">
                 <h3 class="panel-title">Внимание!</h3>
@@ -27,8 +21,6 @@
                 <h3 class="panel-title">Запрос в службу поддержки</h3>
             </div>
             <div class="panel-body">
-
-
                 <form action="" method="" role="form" class="form-horizontal">
                     <div class="form-group">
                         <label for="mail" class="col-sm-4 control-label">Ваш логин</label>
@@ -62,7 +54,6 @@
                         </div>
                     </div>
 
-
                     <div class="form-group">
                         <label for="text" class="col-sm-4 control-label">Код проверки</label>
                         <div class="col-lg-8">
@@ -71,8 +62,6 @@
                             </p>
                         </div>
                     </div>
-
-
                     <button type="submit" class="btn btn-primary" class="pull-right">Отправить вопрос</button>
                 </form>
             </div>
@@ -80,7 +69,6 @@
     </div>
     <div class="tab-pane fade" id="tab2">
         <h2>Tab2</h2>
-
         <table class="table table-hover">
             <thead>
             <tr>
@@ -124,5 +112,4 @@
         </table>
 
     </div>
-
 </div>

@@ -18,14 +18,12 @@
         </div>
         <div id="loginNotification"></div>
 
-
         <div class="mtop10">
             <input type="text" name="username" class="form-control" placeholder="Логин">
         </div>
         <div class="mtop10">
             <input type="password" name="password" class="form-control" placeholder="Пароль">
         </div>
-
 
                 <div class="mtop10" style="display:none" id="loginCaptcha">
                     <div class="g-recaptcha"  id="recaptcha2" data-sitekey="6LeP4w0TAAAAAKSkMgx_7TRsIeXrz5uzMqOsjBox"  style="width: 100%;overflow:hidden;border-right:1px solid #ccc" data-size="200"></div>
@@ -42,13 +40,6 @@
         <? }else {
             ?>
 
-            <!--<div class="mtop10">
-                Вы авторизованы как <?/*=$user['nickname']*/?><br>(<?/*=$user['email']*/?>)<br>
-                Вы <?/* if($user['usertype'] == 'buyer') echo 'Покупатель';else echo "Каппер"*/?><br>
-                <a href="/user/logout">Выйти</a>
-            </div>-->
-
-
             <div class="list-group menu-kapper">
                 <span href="#" class="list-group-item">
                     <a href="/user/buyer/<?=$user['nickname']?>">
@@ -57,50 +48,54 @@
                     </a>
                 </span>
                 <a href="/user/buyer/<?=$user['nickname']?>" class="list-group-item">
-<!--                    <span class="badge">14</span>-->
-                    <i class="fa fa-home"></i> Моя страница
+                    <i class="fa fa-home"></i>
+                    Моя страница
                 </a>
                 <a href="/user/balance" class="list-group-item">
-                    <span class="badge">
-                        <i class="fa fa-usd"></i> 57.5
+                    <span class="badge"><i class="fa fa-usd"></i>
+                        57.5
                     </span>
-                    <i class="fa fa-credit-card"></i> Баланс
+                    <i class="fa fa-credit-card"></i>
+                    Баланс
                 </a>
                 <a href="#" class="list-group-item disabled">
-<!--                    <span class="badge">1</span>-->
-                    <i class="fa fa-money"></i> Продажи
+                    <i class="fa fa-money"></i>
+                    Продажи
                 </a>
                 <a href="#" class="list-group-item disabled">
-<!--                    <span class="badge">1</span>-->
-                    <i class="fa fa-archive"></i> Архив
+                    <i class="fa fa-archive"></i>
+                    Архив
                 </a>
                 <a href="#" class="list-group-item disabled">
-<!--                    <span class="badge">1</span>-->
-                    <i class="fa fa-cog"></i> Настройки
+                    <i class="fa fa-cog"></i>
+                    Настройки
                 </a>
                 <a href="/user/supportsend" class="list-group-item">
-<!--                    <span class="badge">1</span>-->
-                    <span class="badge">1 ответ</span>
-                    <i class="fa fa-comments"></i> Служба поддержки
+                    <span class="badge">
+                        1 ответ
+                    </span>
+                    <i class="fa fa-comments"></i>
+                    Служба поддержки
                 </a>
                 <a href="#" class="list-group-item disabled">
-                    <span class="badge">2</span>
-                    <i class="fa fa-volume-up"></i> Уведомления
+                    <span class="badge">
+                        2
+                    </span>
+                    <i class="fa fa-volume-up"></i>
+                    Уведомления
                 </a>
                 <a href="#" class="list-group-item disabled">
-<!--                    <span class="badge">1</span>-->
-                    <i class="fa fa-plus-square"></i> Добавить прогноз
+                    <i class="fa fa-plus-square"></i>
+                    Добавить прогноз
                 </a>
                 <a href="#" class="list-group-item disabled">
-<!--                    <span class="badge">1</span>-->
-                    <i class="fa fa-pencil-square"></i> Написать в блог
+                    <i class="fa fa-pencil-square"></i>
+                    Написать в блог
                 </a>
                 <span class="list-group-item">
                     <a href="/user/logout" class="btn btn-danger">Выйти</a>
                 </span>
             </div>
-
-
         <?
         }?>
     </div>

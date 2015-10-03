@@ -20,7 +20,6 @@ $(document).ready(function() {
 
     $('[data-toggle="popover"]').popover();
 
-
     $('#loginBtn').click(function () {
         $.ajax({
             type: "POST",
@@ -41,9 +40,6 @@ $(document).ready(function() {
             }
         });
     });
-
-
-
 
     $("#more").click(function () {
         var page  = $("#more-container").attr('data-num');

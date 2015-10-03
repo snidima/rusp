@@ -14,12 +14,12 @@
 
         </div>
         <hr>
-        <h6>
-             <p><b>Активных месяцев на бирже:</b> <?=rand(1,20)?> </p>
-             <p><b>Профильный вид спорта:</b> "Общий" <br></p>
-             <p><b>Фиксированное время рассылки:</b> <br></p>
-             <p><b>Дабвлений в избранное:</b> 10</p>
-        </h6>
+        <h5>
+             <p><b><i class="fa fa-line-chart"></i> Активных месяцев на бирже:</b> <?=rand(1,20)?> </p>
+             <p><b><i class="fa fa-futbol-o"></i> Профильный вид спорта:</b> "Общий" <br></p>
+             <p><b><i class="fa fa-calendar"></i> Фиксированное время рассылки:</b> <br></p>
+             <p><b><i class="fa fa-star"></i> Дабвлений в избранное:</b> 10</p>
+        </h5>
         <hr>
         <ul class="nav nav-pills">
             <li class="active"><a href="#">Стастистика</a></li>
@@ -41,14 +41,6 @@
         </ul>
 	</div>
 </div>
-
-<?php
-
-//var_dump($info) ;
-
-
-
-?>
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg">

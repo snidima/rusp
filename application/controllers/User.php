@@ -344,7 +344,7 @@ class User extends CI_Controller {
 
     }
 
-    public function more() // перенести $num, проверить сколько осталось, спрятать кнопку ...
+    public function more()
     {
         /*вывести еще 2 записи. для упрощения должно быть равно $num в function balance()*/
         $num = 1;
@@ -385,7 +385,4 @@ class User extends CI_Controller {
     {
         $this->view();
     }
-
-
-
 }
