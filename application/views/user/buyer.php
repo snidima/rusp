@@ -14,13 +14,31 @@
 
         </div>
         <hr>
-        <h5><b>Активных месяцев на бирже:</b> <?=rand(1,20)?></h5>
+        <h6>
+             <p><b>Активных месяцев на бирже:</b> <?=rand(1,20)?> </p>
+             <p><b>Профильный вид спорта:</b> "Общий" <br></p>
+             <p><b>Фиксированное время рассылки:</b> <br></p>
+             <p><b>Дабвлений в избранное:</b> 10</p>
+        </h6>
         <hr>
-        <h5><b>Профильный вид спорта:</b> "Общий"</h5>
-        <hr>
-        <h5><b>Фиксированное время рассылки:</b> ?</h5>
-        <hr>
-        <h5><b>Дабвлений в избранное:</b> 10</h5>
+        <ul class="nav nav-pills">
+            <li class="active"><a href="#">Стастистика</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Результаты</a></li>
+            <li><a href="#">Купить</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Еще.. <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+        </ul>
 	</div>
 </div>
 

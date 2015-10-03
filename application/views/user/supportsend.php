@@ -99,6 +99,27 @@
                 <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</td>
                 <td><a href="#">Перейти</a></td>
             </tr>
+            <tr>
+                <td>1234</td>
+                <td>3 марта 2015, 02:00</td>
+                <td>Глупый вопрос</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</td>
+                <td><a href="#">Перейти</a></td>
+            </tr>
+            <tr class="success">
+                <td>1234</td>
+                <td>3 марта 2015, 02:00</td>
+                <td>Глупый вопрос</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</td>
+                <td><a href="/user/supportdialog">Перейти</a></td>
+            </tr>
+            <tr>
+                <td>1234</td>
+                <td>3 марта 2015, 02:00</td>
+                <td>Глупый вопрос</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</td>
+                <td><a href="#">Перейти</a></td>
+            </tr>
             </tbody>
         </table>
 

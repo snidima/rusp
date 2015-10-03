@@ -66,31 +66,32 @@
                     </span>
                     <i class="fa fa-credit-card"></i> Баланс
                 </a>
-                <a href="#" class="list-group-item">
+                <a href="#" class="list-group-item disabled">
 <!--                    <span class="badge">1</span>-->
                     <i class="fa fa-money"></i> Продажи
                 </a>
-                <a href="#" class="list-group-item">
+                <a href="#" class="list-group-item disabled">
 <!--                    <span class="badge">1</span>-->
                     <i class="fa fa-archive"></i> Архив
                 </a>
-                <a href="#" class="list-group-item">
+                <a href="#" class="list-group-item disabled">
 <!--                    <span class="badge">1</span>-->
                     <i class="fa fa-cog"></i> Настройки
                 </a>
                 <a href="/user/supportsend" class="list-group-item">
 <!--                    <span class="badge">1</span>-->
+                    <span class="badge">1 ответ</span>
                     <i class="fa fa-comments"></i> Служба поддержки
                 </a>
-                <a href="#" class="list-group-item">
+                <a href="#" class="list-group-item disabled">
                     <span class="badge">2</span>
                     <i class="fa fa-volume-up"></i> Уведомления
                 </a>
-                <a href="#" class="list-group-item">
+                <a href="#" class="list-group-item disabled">
 <!--                    <span class="badge">1</span>-->
                     <i class="fa fa-plus-square"></i> Добавить прогноз
                 </a>
-                <a href="#" class="list-group-item">
+                <a href="#" class="list-group-item disabled">
 <!--                    <span class="badge">1</span>-->
                     <i class="fa fa-pencil-square"></i> Написать в блог
                 </a>

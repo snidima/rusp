@@ -381,6 +381,11 @@ class User extends CI_Controller {
         $this->view();
     }
 
+    public function supportdialog()
+    {
+        $this->view();
+    }
+
 
 
 }
